@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+// Created By Cornellius William
 use Illuminate\Http\Request;
+use App\User;
 use App\AdminRequest;
 use Image;
 use DateTime;
@@ -75,6 +76,16 @@ class UserRequestController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+     public function upload(User $user,AdminRequest $adminRequest)
+     {
+         // $dataMasuk = AdminRequest::auth()->attempt(['email' => $request->email, 'password' => $request->password]);
+         $id =  User::all();
+         $user = Auth::user()->name;
+         $admin = adminRequest::all();
+         $namaUser = $id->where('nama', 'william');
+         return $user;
+         return view('user.upload',['request'=>$adminRequest]);
+     }
     public function store(Request $request)
     {
         //

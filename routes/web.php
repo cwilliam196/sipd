@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Created By Cornellius William
 
 Route::get('/', 'AuthController@getLogin')->middleware('guest')->name('login');
 Route::post('/', 'AuthController@postLogin')->middleware('guest');
@@ -29,6 +30,9 @@ Route::get('/home_admin/data_masuk/{adminRequest}', 'AdminRequestController@show
 // untuk data masuk user
 Route::get('/home_user/data_masuk', 'UserRequestController@index')->middleware('auth');
 Route::post('/home_user/data_masuk', 'UserRequestController@create')->middleware('auth');
+//untuk upload scan dinas user
+Route::get('/home_user/upload_scan', 'UserRequestController@upload')->middleware('auth');
+Route::post('/home_user/upload_scan', 'UserRequestController@store')->middleware('auth');
 // untuk update request dari user
 Route::get('/home_admin/data_masuk/{adminRequest}/edit', 'AdminRequestController@edit')->middleware('auth');
 Route::post('/home_admin/data_masuk/{adminRequest}/edit', 'AdminRequestController@update')->middleware('auth');

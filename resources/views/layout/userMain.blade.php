@@ -109,10 +109,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li><a href="{{url('/home_user')}}"><i class="fa fa-tachometer"></i> <span>Dashboard</span><div class="clearfix"></div></a></li>
 					<li id="menu-academico" ><a href="#"><i class="fa fa-envelope nav_icon"></i><span>Inbox</span><div class="clearfix"></div></a></li>
 					<li id="menu-academico"><a href="{{ url('/home_user/data_masuk')}}"><i class="fa fa-picture-o" aria-hidden="true"></i><span>Request Data</span><div class="clearfix"></div></a>
-
 					</li>
-					
-					<li id="menu-academico" ><a href="{{ url('/home_user/data_selesai')}}"><i class="fa fa-bar-chart"></i><span>Upload Scan Laporan Dinas</span><div class="clearfix"></div></a>
+
+					<li id="menu-academico" ><a href="{{ url('/home_user/upload_scan')}}"><i class="fa fa-bar-chart"></i><span>Upload Scan Laporan Dinas</span><div class="clearfix"></div></a>
 
 					</li>
 				</ul>

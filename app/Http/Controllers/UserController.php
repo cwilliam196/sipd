@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+// Created By Cornellius William
 use Illuminate\Http\Request;
 use App\User;
 use Image;
@@ -74,6 +74,6 @@ class UserController extends Controller
       return redirect()->back()->with('status', 'Data Berhasil Di Update');
     }
 
-    
+
 
 }
